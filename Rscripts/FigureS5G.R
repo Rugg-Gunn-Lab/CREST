@@ -14,7 +14,7 @@ dir.create(saveext)
 dir.create(paste(saveext,"/Markers/",sep=""))
 dir.create(paste(saveext,"/DimRed/",sep=""))
 
-Data <- readRDS("/Users/christopherpenfold/Desktop/Data/Rhesus/test/CREST_anotated.rds")
+Data <- readRDS("Data/CREST_anotated.rds")
 Idents(Data,WhichCells(Data,idents=c("Epithelia_gland","Epithelia_SOX","Epithelia_cil","Epithelia_lum"))) <- "Epithelial"
 Idents(Data,WhichCells(Data,idents=c("Stroma_decid","Stroma_prolif"))) <- "Stroma"
 Data <- subset(Data,idents = c("Epithelial","Stroma"))
