@@ -9,13 +9,13 @@ library(stringr)
 
 set.seed(1) 
 
-saveext = "~/Desktop/Data/Endometrial/InVitro/Matteo/"
+saveext = "./CREST/"
 dir.create(saveext)
 dir.create(paste(saveext,"/Markers/",sep=""))
 dir.create(paste(saveext,"/DimRed/",sep=""))
 
 #Get the dataset
-D <- readRDS("/Users/christopherpenfold/Downloads/CREST_epithelia.rds")
+D <- readRDS("Data/CREST_epithelia.rds")
 
 D$ID6 <- factor(D$ID6,levels=c("Ours","proliferative","early-secretory","late-secretory"))
 
