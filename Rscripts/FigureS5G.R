@@ -1,3 +1,18 @@
+ibrary(Seurat)
+library(ggplot2)
+library(cowplot)
+library(Matrix)
+library(dplyr)
+library(pheatmap)
+library("readxl")
+library(stringr)
+
+set.seed(1) 
+
+saveext = "~/Desktop/Data/Endometrial/InVitro/Matteo/"
+dir.create(saveext)
+dir.create(paste(saveext,"/Markers/",sep=""))
+dir.create(paste(saveext,"/DimRed/",sep=""))
 
 Data <- readRDS("/Users/christopherpenfold/Desktop/Data/Rhesus/test/CREST_anotated.rds")
 Idents(Data,WhichCells(Data,idents=c("Epithelia_gland","Epithelia_SOX","Epithelia_cil","Epithelia_lum"))) <- "Epithelial"
