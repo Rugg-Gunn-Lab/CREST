@@ -9,7 +9,7 @@ library(stringr)
 
 set.seed(1) 
 
-saveext = "~/Desktop/Data/Endometrial/InVitro/Matteo/"
+saveext = "./CREST/"
 dir.create(saveext)
 dir.create(paste(saveext,"/Markers/",sep=""))
 dir.create(paste(saveext,"/DimRed/",sep=""))
