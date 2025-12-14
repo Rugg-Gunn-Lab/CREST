@@ -19,15 +19,15 @@ D <- readRDS("/Users/christopherpenfold/Downloads/CREST_epithelia.rds")
 
 D$ID6 <- factor(D$ID6,levels=c("Ours","proliferative","early-secretory","late-secretory"))
 
-D$FineAno <- Idents(D)
+#D$FineAno <- Idents(D)
 #This contains fine anotation labels, so lets combined some labels for a broader anotation
-Idents(D,cells=WhichCells(D,idents=c("CTB","eCTB","STB","EVT","Tb_CS7","Tb_CS6","Tb_CS3","Tb_CS4","Tb_CS5"))) <- "Trophoblast"
-Idents(D,cells=WhichCells(D,idents=c("Amnion","Am_CS5","Am_CS6","Am_CS7","PGC_CS5"))) <- "Amnion"
-Idents(D,cells=WhichCells(D,idents=c("YolkSac","SYS_CS5","SYS_CS6","SYS_CS7"))) <- "Yolk Sac"
-Idents(D,cells=WhichCells(D,idents=c("Hypoblast","Hyp_CS3","VE_CS5","VE_CS6","VE_CS7","VE_CS4"))) <- "Hypoblast"
-Idents(D,cells=WhichCells(D,idents=c("ExEmbMes","ExMes_CS5","ExMes_CS6","ExMes_CS7","Stalk_CS6","Stalk_CS7"))) <- "Mesehncyme"
-Idents(D,cells=WhichCells(D,idents=c("EmDisc_CS5","EmbDisc","EmDisc_CS6","EmDisc_CS7","EmDiscPS_CS6","Epi_CS4","Epi_CS3"))) <- "Embryonic disc"
-Idents(D,cells=WhichCells(D,idents=c("PGC_CS6","PGC_CS7"))) <- "Embryonic disc"
+#Idents(D,cells=WhichCells(D,idents=c("CTB","eCTB","STB","EVT","Tb_CS7","Tb_CS6","Tb_CS3","Tb_CS4","Tb_CS5"))) <- "Trophoblast"
+#Idents(D,cells=WhichCells(D,idents=c("Amnion","Am_CS5","Am_CS6","Am_CS7","PGC_CS5"))) <- "Amnion"
+#Idents(D,cells=WhichCells(D,idents=c("YolkSac","SYS_CS5","SYS_CS6","SYS_CS7"))) <- "Yolk Sac"
+#Idents(D,cells=WhichCells(D,idents=c("Hypoblast","Hyp_CS3","VE_CS5","VE_CS6","VE_CS7","VE_CS4"))) <- "Hypoblast"
+#Idents(D,cells=WhichCells(D,idents=c("ExEmbMes","ExMes_CS5","ExMes_CS6","ExMes_CS7","Stalk_CS6","Stalk_CS7"))) <- "Mesehncyme"
+#Idents(D,cells=WhichCells(D,idents=c("EmDisc_CS5","EmbDisc","EmDisc_CS6","EmDisc_CS7","EmDiscPS_CS6","Epi_CS4","Epi_CS3"))) <- "Embryonic disc"
+#Idents(D,cells=WhichCells(D,idents=c("PGC_CS6","PGC_CS7"))) <- "Embryonic disc"
 
 #Colours for plotting based on broad anos
 cols<-c("Embryonic disc"="#437abe",
